@@ -7,17 +7,21 @@
 # OEM_2 : /
 
 
+# ------------------------------------------------   Corne Configuration   ---------------------------------------------------
+#
+# Layer 6 (Right Thumb): Alt mask
 # ----------------------------------------------------------------------------------------------------------------------------
 # |         |         |         |tog fulls|tog float|         | |         |      Focus workspace (1, 2, 3 4)      |         |
-# |         |   Move Focus (Left, up, down, right)  |         | |         | Move Window (Left, up, down, right)   |         |
-# |         |         |         | Cycle Layout p/n  |         | |         |         |         |         |         |         |
+# |         |   Move Focus (Left, up, down, right)  |         | | Unstack | Move Window (Left, up, down, right)   |         |
+# |         |         |         | Cycle Layout p/n  | CycStck | | CycStck |  Stack Window (Left, Up, Down, Right) |         |
 #                               |         |         |         | |---------|         |         |
-
-# Alt-Shift layer
+#
+#
+# Layer 7 (Left + Right thumb): Alt-Shift mask
 # ----------------------------------------------------------------------------------------------------------------------------
-# |         |         |         |         |         |         | |         |      Send to Worskpace (1, 2 ,3, 4)   |         |
-# |         |         |         |         |         |         | |         |         |         |         |         |         |
-# |         |         |         |         |         |         | |         |         |         |         |         |         |
+# |         |  Close  | Retile  |         | Promote |         | |         |      Send to Worskpace (1, 2 ,3, 4)   |         |
+# |         | FocMon 0|         |         | FocMon 1| Minimize| |         |         |         |         |         |         |
+# |         |         |         | Flip X  | Flip Y  |         | |         |         |         |         |         |         |
 #                               |         |         |---------| |---------|         |         |
 
 
