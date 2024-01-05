@@ -12,28 +12,22 @@
 # Layer 6 (Right Thumb): Alt mask
 # ----------------------------------------------------------------------------------------------------------------------------
 # |         |         |         |tog fulls|tog float|         | |         |      Focus workspace (1, 2, 3 4)      |         |
-# |         |   Move Focus (Left, up, down, right)  |         | | Unstack | Move Window (Left, up, down, right)   |         |
-# |         |         |         | Cycle Layout p/n  | CycStck | | CycStck |  Stack Window (Left, Up, Down, Right) |         |
+# |         |   Move Focus (Left, up, down, right)  |         | |         | Move Window (Left, up, down, right)   |         |
+# |         |         |         | Cycle Layout p/n  |         | |         |  BSP    | UWideStk| Vstack  | HStack  |         |
 #                               |         |         |         | |---------|         |         |
 #
 #
 # Layer 7 (Left + Right thumb): Alt-Shift mask
 # ----------------------------------------------------------------------------------------------------------------------------
-# |         |  Close  | Retile  |         | Promote |         | |         |      Send to Worskpace (1, 2 ,3, 4)   |         |
-# |         | FocMon 0|         |         | FocMon 1| Minimize| |         |         |         |         |         |         |
-# |         |         |         | Flip X  | Flip Y  |         | |         |         |         |         |         |         |
+# |         |  Close  | Retile  | Minimize| Promote |         | |         |      Send to Worskpace (1, 2 ,3, 4)   |         |
+# |         | FocMon 0|         |         | FocMon 1|         | |         |  Stack Window (Left, Up, Down, Right) |         |  - 
+# |         | WhkdRst | KmrbRst | Flip X  | Flip Y  |         | |         |  CycleStack p/n   | Unstack |         |         |  - 
 #                               |         |         |---------| |---------|         |         |
 
 
-
-
 # Reload whkd configuration
-# alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
-# alt + b                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
-# alt + z                 : taskkill /f /im whkd.exe; start /b whkd
-alt + shift + z         : taskkill /f /im whkd.exe;
+alt + shift + z         : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle
 alt + shift + x         : komorebic reload-configuration
-
 
 # Focus windows
 alt + a                 : komorebic focus left
@@ -43,34 +37,32 @@ alt + t                 : komorebic focus right
 alt + g                 : komrebic cycle-focus next
 alt + shift + a         : komorebi focus-monitor 0
 alt + shift + t         : komorebic focus-monitor 1
-# alt + shift + a       : komorebic cycle-focus previous
-# alt + shift + t       : komorebic cycle-focus next
 
 # Move windows
-alt + n         : komorebic move left
-alt + e         : komorebic move down
-alt + i         : komorebic move up
-alt + o         : komorebic move right
+alt + n                 : komorebic move left
+alt + e                 : komorebic move down
+alt + i                 : komorebic move up
+alt + o                 : komorebic move right
 
 # Manipulate windows
 alt + p                 : komorebic toggle-float
 alt + f                 : komorebic toggle-monocle
-alt + shift + m         : komorebic minimize
 alt + shift + q         : komorebic close
+alt + shift + w         : komorebic retile
+alt + shift + f         : komorebic minimize
 alt + shift + p         : komorebic promote
 
-# Window manager options
-alt + shift + w         : komorebic retile
-# alt + shift + p         : komorebic toggle-pause
+# Cycle layouts:
+alt + c                 : komorebic cycle-layout next
+alt + d                 : komorebic cycle-layout
+alt + shift + c         : komorebic flip-layout horizontal
+alt + shift + d         : komorebic flip-layout vertical
 
-# Stack windows
-alt + h                 : komorebic stack left
-alt + OEM_COMMA         : komorebic stack down
-alt + OEM_PERIOD        : komorebic stack up
-alt + OEM_2             : komorebic stack right
-alt + m                 : komorebic unstack # oem_1 is ;
-alt + k                 : komorebic cycle-stack previous # oem_4 is [
-alt + v                 : komorebic cycle-stack next # oem_6 is ]
+# Set layout
+alt + h                 : komorebic change-layout bsp
+alt + OEM_COMMA         : komorebic change-layout ultrawide-vertical-stack
+alt + OEM_PERIOD        : komorebic change-layout vertical-stack
+alt + OEM_2             : komorebic change-layout horizontal-stack
 
 # Workspaces
 alt + l                 : komorebic focus-workspace 0
@@ -78,45 +70,30 @@ alt + u                 : komorebic focus-workspace 1
 alt + y                 : komorebic focus-workspace 2
 alt + OEM_1             : komorebic focus-workspace 3
 
+# Send to Workspace
 alt + shift + l         : komorebic send-to-workspace 0
 alt + shift + u         : komorebic send-to-workspace 1
 alt + shift + y         : komorebic send-to-workspace 2
 alt + shift + OEM_1     : komorebic send-to-workspace 3
 
-# Cycle layouts:
-alt + c   : komorebic cycle-layout next
-alt + d   : komorebic cycle-layout
 
+# Stack windows
+alt + shift + n         : komorebic stack left
+alt + shift + e         : komorebic stack down
+alt + shift + i         : komorebic stack up
+alt + shift + o         : komorebic stack right
+alt + shift + h          : komorebic cycle-stack next
+alt + shift + OEM_COMMA  : komorebic cycle-stack previous
+alt + shift + OEM_PERIOD : komorebic unstack
 
+# Resize
+alt + shift + m          : komorebic resize-axis horizontal increase
+alt + shift + k          : komorebic resize-axis horizontal decrease
+alt + shift + g          : komorebic resize-axis vertical increase
+alt + shift + v          : komorebic resize-axis vertical decrease
 
-# Reload whkd configuration
-# alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
-# alt + b                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
-# alt + shift + b         : komorebic reload-configuration
 
 # App shortcuts - these require shell to be pwsh / powershell
 # The apps will be focused if open, or launched if not open
 # alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
 # alt + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
-
-
-
-alt + shift + return    : komorebic promote
-
-# Resize
-alt + shift + n          : komorebic resize-axis horizontal increase
-alt + shift + o          : komorebic resize-axis horizontal decrease
-alt + shift + e          : komorebic resize-axis vertical increase
-alt + shift + i          : komorebic resize-axis vertical decrease
-
-
-
-# Layouts
-alt + shift + c                 : komorebic flip-layout horizontal
-alt + shift + d                 : komorebic flip-layout vertical
- 
-
-# Move windows across workspaces
-# alt + shift + 1         : komorebic move-to-workspace 0
-# alt + shift + 2         : komorebic move-to-workspace 1   
-# alt + shift + 3         : komorebic move-to-workspace 2
