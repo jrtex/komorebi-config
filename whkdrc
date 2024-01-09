@@ -5,7 +5,8 @@
 # OEM_PERIOD : .
 # OEM_1 : ;
 # OEM_2 : /
-
+# OEM_4 : [
+# OEM_6 : ]
 
 # ------------------------------------------------   Corne Configuration   ---------------------------------------------------
 #
@@ -34,9 +35,12 @@ alt + a                 : komorebic focus left
 alt + r                 : komorebic focus down
 alt + s                 : komorebic focus up
 alt + t                 : komorebic focus right
-alt + g                 : komrebic cycle-focus next
-alt + shift + a         : komorebi focus-monitor 0
+alt + g                 : komorebic cycle-focus next
+alt + shift + a         : komorebic focus-monitor 0
 alt + shift + t         : komorebic focus-monitor 1
+
+alt + OEM_4             : komerebic cycle-focus next
+alt + OEM_6             : komorebic cycle-focus previous
 
 # Move windows
 alt + n                 : komorebic move left
@@ -69,6 +73,9 @@ alt + l                 : komorebic focus-workspace 0
 alt + u                 : komorebic focus-workspace 1
 alt + y                 : komorebic focus-workspace 2
 alt + OEM_1             : komorebic focus-workspace 3
+
+alt + OEM_MINUS         : komorebic cycle-workspace previous
+alt + OEM_PLUS          : komorebic cycle-workspace next
 
 # Send to Workspace
 alt + shift + l         : komorebic send-to-workspace 0
