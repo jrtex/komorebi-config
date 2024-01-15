@@ -13,7 +13,7 @@
 # Layer 6 (Right Thumb): Alt mask
 # ----------------------------------------------------------------------------------------------------------------------------
 # |         |         |         |tog fulls|tog float|         | |         |      Focus workspace (1, 2, 3 4)      |         |
-# |         |   Move Focus (Left, up, down, right)  |         | |         | Move Window (Left, up, down, right)   |         |
+# |         |   Move Focus (Left, up, down, right)  |FocusNext| |         | Move Window (Left, up, down, right)   |         |
 # |         |         |         | Cycle Layout p/n  |         | |         |  BSP    | UWideStk| Vstack  | HStack  |         |
 #                               |         |         |         | |---------|         |         |
 #
@@ -36,11 +36,11 @@ alt + r                 : komorebic focus down
 alt + s                 : komorebic focus up
 alt + t                 : komorebic focus right
 alt + g                 : komorebic cycle-focus next
-alt + shift + a         : komorebic focus-monitor 0
-alt + shift + t         : komorebic focus-monitor 1
+alt + shift + a         : komorebic cycle-workspace previous
+alt + shift + t         : komorebic cycle-workspace next
 
-alt + OEM_4             : komerebic cycle-focus next
-alt + OEM_6             : komorebic cycle-focus previous
+alt + OEM_4             : komerebic cycle-focus previous
+alt + OEM_6             : komorebic cycle-focus next
 
 # Move windows
 alt + n                 : komorebic move left
