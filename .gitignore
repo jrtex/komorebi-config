@@ -1,3 +1,5 @@
 komorebi_def.json
+komorebi/schema.json
 configstore/*
 scoop/*
+oh-my-posh/themes/*

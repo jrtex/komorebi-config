@@ -26,10 +26,29 @@
     },
     {
       "workspaces": [
-        { "name": "A", "layout": "BSP" },
+        {
+          "name": "A",
+          "layout": "BSP",
+          "workspace_rules": [
+            {
+              "kind": "Title",
+              "id": "Shared Content \\|.+\\| Microsoft Teams",
+              "matching_strategy": "Regex"
+            }
+          ]
+        },
         { "name": "B", "layout": "VerticalStack" },
         { "name": "C", "layout": "HorizontalStack" },
-        { "name": "D", "layout": "UltrawideVerticalStack" }
+        {
+          "name": "D",
+          "layout": "UltrawideVerticalStack",
+          "workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Spotify"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -37,6 +56,11 @@
     {
       "kind": "Exe",
       "id": "ConEmu64.exe"
+    },
+    {
+      "kind": "Title",
+      "id": "\\| Microsoft Teams",
+      "matching_strategy": "Regex"
     }
   ]
 }
