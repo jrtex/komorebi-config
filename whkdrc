@@ -73,6 +73,7 @@ alt + l                 : komorebic focus-workspace 0
 alt + u                 : komorebic focus-workspace 1
 alt + y                 : komorebic focus-workspace 2
 alt + OEM_1             : komorebic focus-workspace 3
+alt + j                 : komorebic focus-workspace 4
 
 alt + OEM_MINUS         : komorebic cycle-workspace previous
 alt + OEM_PLUS          : komorebic cycle-workspace next
@@ -82,6 +83,7 @@ alt + shift + l         : komorebic send-to-workspace 0
 alt + shift + u         : komorebic send-to-workspace 1
 alt + shift + y         : komorebic send-to-workspace 2
 alt + shift + OEM_1     : komorebic send-to-workspace 3
+alt + shift + j         : komorebic send-to-workspace 4
 
 
 # Stack windows
