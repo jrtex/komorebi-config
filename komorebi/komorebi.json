@@ -27,29 +27,10 @@
     },
     {
       "workspaces": [
-        {
-          "name": "A",
-          "layout": "BSP",
-          "workspace_rules": [
-            {
-              "kind": "Title",
-              "id": "Shared Content \\|.+\\| Microsoft Teams",
-              "matching_strategy": "Regex"
-            }
-          ]
-        },
+        { "name": "A", "layout": "BSP" },
         { "name": "B", "layout": "VerticalStack" },
         { "name": "C", "layout": "HorizontalStack" },
-        {
-          "name": "D",
-          "layout": "UltrawideVerticalStack",
-          "workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "Spotify"
-            }
-          ]
-        }
+        { "name": "D", "layout": "UltrawideVerticalStack" }
       ]
     },
     {
